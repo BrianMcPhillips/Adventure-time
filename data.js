@@ -1,22 +1,23 @@
 const monsters = {
     id: 'monsters',
-    title: 'A Den of Monsters',
+    title: 'A Dark Forest Filled With Monsters',
     map: {
         top: '89%',
         left: '44%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/Monsters.jpeg',
     description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
+        You are traveling through a magical land and you enter a dark forest, the forest is known 
+        for being haunted and filled with mysterious creatures. You set up camp for the night and 
+        hear a loud monster growling in the next row of trees. What do you do?
     `,
     choices: [{
         id: 'negotiate',
-        description: 'Negotiate with them',
+        description: 'Use your wit to trick them',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
+            Knowing that monsters are greedy you tell them there is a hidden treasure in the forest nearby,
+            if they pay you 35 gold and let you go; you will give them the location to the treasure and 
+            they will posess great riches for the rest of their existence.
         `,
         hp: 0,
         gold: 35
@@ -24,19 +25,18 @@ const monsters = {
         id: 'fight',
         description: 'Fiiiiiggghhhttt!',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
+            You pull out your sword and initiate a vicious attack, slashing and dodging like your life is about to end.
+            You vanquish the foes in a matter of seconds and are the true victor. The bad news is you take 30 hp damage. 
+            The good news is you find 50 gold on the dead monsters.
         `,
         hp: -30,
         gold: 50
     }, {
         id: 'run',
-        description: 'Run away like good Sir Robin',
+        description: 'Run away like Forest Gump',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            You get up and run leavig your entire campsite and all of your personal possesions behind. 
+            You cannot run fast enough and lose 50hp during the escape.
         `,
         hp: -50,
         gold: 0
@@ -45,28 +45,28 @@ const monsters = {
 
 const dragon = {
     id: 'dragon',
-    title: 'A Problem Dragon',
+    title: 'A Menacing Dragon',
     map: {
         top: '57%',
         left: '67%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/Dragon.jpeg',
     audio: 'dragon.wav',
     action: 'dragon-growl.aiff',
     description: `
-        You travel to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        After your encounter in the dark forest, you travel to a nearby village you have heard is being
+        being tormented by a legendary dragon who frequently flies down from his lair high in the mountains 
+        to attack the town and steal its riches. You have heard the stories but have never seen a dragon and are doubtful of its existence.
+        Once arriving to the town you stay at the local inn. Deep into the night you hear the loud screech of the dragon descending upon you. What course of action do you take?
     `,
     choices: [{
         id: 'run',
-        description: 'Get the hell out of the village',
+        description: 'Get the hell out of the village, it was a mistake coming here',
         result: `
             You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
+            in the panic you find a bag on the ground with 35 gold.
             Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            way out of town and take 35 hp damage. 
         `,
         hp: -35,
         gold: 35
@@ -105,15 +105,13 @@ const treasure = {
         top: '31%',
         left: '5%'
     },
-    image: 'http://www.placekitten.com/200/200',
+    image: '../assets/Chests.jpeg',
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+       As you enter the great halls of the dwarf caves, you come across a chamber 
+       with three chests grandly displayed on the floor. Just as you walk to the chests you trigger a trap in the floor and the chamber starts to collapse.
+       You only have time to open one chest, which one do you choose to open?
     `,
     choices: [{
         id: 'wooden',
