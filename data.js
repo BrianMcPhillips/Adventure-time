@@ -100,7 +100,7 @@ const dragon = {
 
 const treasure = {
     id: 'treasure',
-    title: 'The Golden Treasure',
+    title: 'The Chests in the great halls of the Dwarfs',
     map: {
         top: '31%',
         left: '5%'
@@ -116,19 +116,19 @@ const treasure = {
     choices: [{
         id: 'wooden',
         description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
+        result: 'You\'re intuition that the gold would be hidden in the most unlikely place was correct! You grab 40 gold pieces!',
         hp: 0,
         gold: 40
     }, {
         id: 'golden',
         description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
+        result: 'Oh no! You fell for the trap, the chest is booby trapped with poison and you take 50 hp damage',
         hp: -50,
         gold: 0
     }, {
         id: 'jeweled',
         description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
+        result: 'A warm light engulfs you and you gain 35 hp, not quite what you were looking for but health is a fortune all in itself',
         hp: 35,
         gold: 0
     }]
